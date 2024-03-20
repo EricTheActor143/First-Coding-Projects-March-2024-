@@ -1,0 +1,31 @@
+from tkinter import *
+from pytube import YouTube
+
+a = Tk()
+a.geometry("700x700")
+a.config(bg="blue")
+a.title("YouTube Converter")
+
+Label(a, text= "YouTube", font=("calibri",29,"bold"), bg="light pink").pack()
+
+Label(a, text= "Video Downloader", font=("calibri",29,"bold"), bg="light pink").pack()
+
+
+link = StringVar()
+
+Label(a, text= "Enter the link", font=("calibri",24,"bold")).place(x=180, y=150)
+
+E_Link = Entry(a, width=49, font=31., textvariable=link, bd=5).place(x=40, y=200)
+
+def fun1():
+    url = YouTube(str(link.get()))
+    v = url.streams.first()
+    v.download()
+
+    Label(a, text="Download Complete", font=("calibri",26,"bold"),bg="light blue").place(x=150, y=450)
+    Label(a, text="Check the respective folder", font=("calibri",26,"bold"), bg="light blue").place(x=150, y=550)
+
+
+Button(a, text="Download", font=("calibri",26,"bold"),bg="light green",command=fun1).place(x=200, y=300)
+
+a.mainloop()
