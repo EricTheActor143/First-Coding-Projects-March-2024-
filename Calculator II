@@ -1,0 +1,12 @@
+first = float(input("first number: "))
+second = float(input("second number: "))
+
+sum = (first) + (second)
+product = (first) * (second)
+difference = (first) - (second)
+division = (first) / (second)
+
+print("Sum: "), print(sum)
+print("Product: "), print(product)
+print("Difference: "), print(difference)
+print("Division: "), print(division)
