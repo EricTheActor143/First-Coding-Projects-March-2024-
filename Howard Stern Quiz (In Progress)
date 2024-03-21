@@ -1,0 +1,23 @@
+print("Welcome to the Howard Stern Show Quiz, enter play to start...")
+
+playing = input("what do you want to do duu?: ")
+if playing.lower() != ("play"):
+    quit()
+
+print("Let's F*ck Some Whores!")
+score = 0
+
+answer = input("What does ETM stand for? ")
+if answer.lower() == "eric the midget":
+    print("Correct!")
+    score += 1
+else: print("Incorrect")
+
+
+answer = input("Who was the culprit behind Shitgate? ")
+if answer.lower() == "tim sabien":
+    print("Correct!")
+    score += 1
+else: print("Incorrect")
+
+print("You got " + str(score) + " questions correct!")
